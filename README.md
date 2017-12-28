@@ -2,42 +2,46 @@
 
 ## Get repositories
 
-cd $HOME
+    cd $HOME
 
-mkdir test
+    mkdir test
 
-cd test
+    cd test
 
-git clone --progress https://github.com/WiSystem/buildroot_ext.git
+    git clone --progress https://github.com/WiSystem/buildroot_ext.git
 
-wget https://buildroot.org/downloads/buildroot-2017.02.tar.gz
+    wget https://buildroot.org/downloads/buildroot-2017.02.tar.gz
 
-tar xf buildroot-2017.02.tar.gz
+    tar xf buildroot-2017.02.tar.gz
 
-cd buildroot-2017.02
+    cd buildroot-2017.02
 
-make BR2_EXTERNAL=../buildroot_ext list-defconfigs
+    make BR2_EXTERNAL=../buildroot_ext list-defconfigs
 
-make grinn_liteboard_defconfig
+# Select defconfig
 
-make all
+    make grinn_liteboard_defconfig
+    make uavx_35i00_defconfig
+    make uavx_37i00_defconfig
+    
+    make all
 
 ## How to use Qt
 
-cd $HOME
+    cd $HOME
 
-export PATH=$HOME/test/buildroot-2017.02/output/host/usr/bin:${PATH}
+    export PATH=$HOME/test/buildroot-2017.02/output/host/usr/bin:${PATH}
 
-mkdir qt
+    mkdir qt
 
-cd qt
+    cd qt
 
-git clone --progress https://github.com/WiSystem/QtVersion.git
+    git clone --progress https://github.com/WiSystem/QtVersion.git
 
-cd QtVersion
+    cd QtVersion
 
-qmake 
+    qmake 
 
-make
+    make
 
 
