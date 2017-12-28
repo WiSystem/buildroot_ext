@@ -21,9 +21,12 @@
 # Select defconfig
 
     make grinn_liteboard_defconfig
+    
     make uavx_35i00_defconfig
     make uavx_37i00_defconfig
     
+# Build
+
     make all
 
 ## How to use Qt
