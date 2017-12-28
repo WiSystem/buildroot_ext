@@ -22,10 +22,14 @@
 
 	model = "UAVX i.MX6 Quad Board 37i00";
 	compatible = "fsl,imx6q-uavx", "fsl,imx6q";
-
+/*
 	memory: memory {
 		linux,usable-memory = <0x10000000 0x20000000
 				       0x80000000 0x20000000>;
+	};
+*/
+	memory: memory {
+		linux,usable-memory = <0x10000000 0x20000000>;
 	};
 
 	aliases {
@@ -45,9 +49,13 @@
 	chosen {
 		stdout-path = &uart1;
 	};
-
+/*
 	memory: memory {
 			reg = <0x10000000 0x40000000>;
+		};
+*/
+	memory: memory {
+			reg = <0x10000000 0x20000000>;
 		};
 
 	regulators {
