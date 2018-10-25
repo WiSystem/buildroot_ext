@@ -10,11 +10,11 @@
 
     git clone --progress https://github.com/WiSystem/buildroot_ext.git
 
-    wget https://buildroot.org/downloads/buildroot-2017.02.tar.gz
+    wget https://buildroot.org/downloads/buildroot-2018.08.2.tar.gz
 
-    tar xf buildroot-2017.02.tar.gz
+    tar xf buildroot-2018.08.2.tar.gz
 
-    cd buildroot-2017.02
+    cd buildroot-2018.08.2
 
     make BR2_EXTERNAL=../buildroot_ext list-defconfigs
 
@@ -33,7 +33,7 @@
 
     cd $HOME
 
-    export PATH=$HOME/test/buildroot-2017.02/output/host/usr/bin:${PATH}
+    export PATH=$HOME/test/buildroot-2018.08.2/output/host/usr/bin:${PATH}
 
     mkdir qt
 
